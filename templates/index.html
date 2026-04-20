@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+  <!-- ── MENU SCREEN ─────────────────────────────────────────── -->
+  <div id="menu-screen" class="screen active">
+    <div class="menu-card">
+      <h1 class="title">Memory Game</h1>
+      <p class="subtitle">Final Project &mdash; OOP Python + Flask</p>
+
+      <div class="form-section">
+        <span class="section-label">Game Mode</span>
+        <div class="radio-group col">
+          <label class="radio-opt">
+            <input type="radio" name="mode" value="solo" checked />
+            <span>1 Player (Solo)</span>
+          </label>
+          <label class="radio-opt">
+            <input type="radio" name="mode" value="pvp" />
+            <span>Human vs Human</span>
+          </label>
+          <label class="radio-opt">
+            <input type="radio" name="mode" value="pvai" />
+            <span>Human vs AI</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <span class="section-label">Card Count</span>
+        <div class="radio-group row">
+          <label class="radio-opt center">
+            <input type="radio" name="count" value="12" />
+            <span>12 cards<br /><small>3 × 4</small></span>
+          </label>
+          <label class="radio-opt center">
+            <input type="radio" name="count" value="16" checked />
+            <span>16 cards<br /><small>4 × 4</small></span>
+          </label>
+          <label class="radio-opt center">
+            <input type="radio" name="count" value="20" />
+            <span>20 cards<br /><small>4 × 5</small></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <span class="section-label">Theme</span>
+        <div class="radio-group row">
+          <label class="radio-opt center">
+            <input type="radio" name="theme" value="numbers" checked />
+            <span>Numbers</span>
+          </label>
+          <label class="radio-opt center">
+            <input type="radio" name="theme" value="animals" />
+            <span>Animals &#x1F43E;</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <span class="section-label">Player Names</span>
+        <div class="name-row">
+          <input id="name1" type="text" placeholder="Player 1" value="Player 1" maxlength="20" />
+          <input id="name2" type="text" placeholder="Player 2" value="Player 2" maxlength="20" disabled />
+        </div>
+      </div>
+
+      <button id="start-btn" class="btn-primary">&#9654; Start Game</button>
+    </div>
+  </div>
+
+  <!-- ── GAME SCREEN ─────────────────────────────────────────── -->
+  <div id="game-screen" class="screen">
+    <div class="game-header">
+      <button id="menu-btn" class="btn-icon">&#8592; Menu</button>
+      <div id="scoreboard" class="scoreboard"></div>
+      <button id="restart-btn" class="btn-icon">&#8635; Restart</button>
+    </div>
+
+    <div class="board-wrap">
+      <div id="board" class="board"></div>
+    </div>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <!-- ── GAME OVER MODAL ─────────────────────────────────────── -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <h2 id="modal-title"></h2>
+      <p id="modal-body"></p>
+      <div class="modal-btns">
+        <button id="play-again-btn" class="btn-primary">Play Again</button>
+        <button id="to-menu-btn" class="btn-secondary">Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/js/game.js"></script>
+</body>
+</html>

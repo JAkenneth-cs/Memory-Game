@@ -1,4 +1,1 @@
-# No third-party dependencies.
-# Requires Python 3.10+ and tkinter (included in standard CPython installers).
-# Install: python main.py
-# Tests:   python -m pytest tests/
+Flask>=3.0.0
