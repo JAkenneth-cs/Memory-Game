@@ -1,3 +1,39 @@
+import random
+
+
+class Player:
+    """Base player class. Demonstrates Encapsulation (_name, _score private)
+    and is the base for Inheritance by HumanPlayer and AIPlayer."""
+
+    def __init__(self, name):
+        self._name = name
+        self._score = 0
+
+    @property
+    def name(self):
+        return self._name
+
+    @property
+    def score(self):
+        return self._score
+
+    def add_score(self):
+        self._score += 1
+
+    def reset_score(self):
+        self._score = 0
+
+    def choose_card(self, board, flipped_indices):
+        """Polymorphic hook — subclasses decide how to pick a card."""
+        return None
+
+
+class HumanPlayer(Player):
+    """Inherits from Player. Input comes from GUI clicks, not choose_card()."""
+
+    def choose_card(self, board, flipped_indices):
+        return None  # GUI click event drives selection
+
 class AIPlayer(Player):
     """Inherits from Player. Overrides choose_card() with memory-based logic."""
 
