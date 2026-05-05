@@ -4,6 +4,9 @@ A card-matching Memory Game built with **Python** and **tkinter**, developed as 
 
 ---
 
+## Owners
+- Agbon | Velasco
+
 ## Features
 
 - **3 Game Modes** — 1 Player (Solo), Human vs Human, Human vs AI
