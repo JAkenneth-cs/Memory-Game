@@ -23,13 +23,15 @@ def main():
     pygame.display.set_caption("Wrong Side Up")
     clock = pygame.time.Clock()
     
-    # Fonts (Using default for now until assets are loaded)
+    # Fonts
+    font_path = "game-assets/fonts/LondrinaSolid-Black.ttf"
     try:
-        title_font = pygame.font.Font(None, 74)
+        title_font = pygame.font.Font(font_path, 90)  # Larger for the title
+        menu_font = pygame.font.Font(font_path, 50)
+    except Exception as e:
+        print(f"Warning: Could not load custom font ({e}), falling back to default.")
+        title_font = pygame.font.Font(None, 90)
         menu_font = pygame.font.Font(None, 50)
-    except:
-        title_font = pygame.font.SysFont("arial", 74)
-        menu_font = pygame.font.SysFont("arial", 50)
         
     # State Machine
     state = "MAIN_MENU"
