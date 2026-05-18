@@ -111,7 +111,7 @@ tk.Frame ─────────── CardWidget
 | Partner | GitHub | Role |
 |---|---|---|
 | Partner A | [@JAkenneth-cs](https://github.com/JAkenneth-cs) | Card models, Board, Views, Game Controller |
-| Partner B | *(add GitHub username)* | Player models, Game Modes, AI, Tests |
+| Partner B | [@Bluejog](https://github.com/Bluejog) | Player models, Game Modes, AI, Tests |
 
 ---
 
